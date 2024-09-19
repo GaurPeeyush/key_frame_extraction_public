@@ -214,7 +214,8 @@ class ImageSelector(object):
                 index_array = np.where(labels == i)
                 files_clusters_index_array.append(index_array)
 
-        files_clusters_index_array = np.array(files_clusters_index_array)
+        #files_clusters_index_array = np.array(files_clusters_index_array) define the datatype as object!
+        files_clusters_index_array = np.array(files_clusters_index_array, dtype="object")
         return files_clusters_index_array,files_clusters_index_array_of_only_one_image
 
     def __plots_for_clustering(self,Hdbascan,all_dst):
